@@ -293,6 +293,7 @@
 .main__content p {
     margin-top: 1rem; 
     font-size: 1rem;
+    line-height: 1.6rem;
     font-weight: 500;
     color: #141414;
     text-align: left;
@@ -470,14 +471,16 @@
     height: 15vh;
     width: 75vw;
     border-radius: 4px;
+    background-color: #f4f4f4;
     /* linear gradient to make a bg image darker */
-    background-image: linear-gradient(to bottom, 
+    /* background-image: linear-gradient(to bottom, 
         rgba(0,0,0,0) 0%,
         rgba(17,17,17,0.6) 100%), 
-        url('images/liyue_evening.jpg');
+        url('images/matheo-jbt-BP0RBHQZMcI-unsplash.jpg'); */
     background-size: cover;
     position: relative;
-    color: #fff;
+    color:#131313;
+    font-weight: 500;
 }
 
 .whats-new__scroll{
@@ -569,6 +572,108 @@
         width: 360px;
     }
 }
+
+
+/*  */
+/* Project Highlights CSS */
+/*  */
+
+
+.proj-highlights {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: auto;
+    padding: 0 50px;
+}
+
+.proj-highlights h1 {
+    color:#131313;
+    background-size: 100%;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.proj-highlights__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proj-highlights__card {
+    margin: 1rem;
+    height: 400px;
+    width: 400px;
+    border-radius: 4px;
+    /* linear gradient to make a bg image darker */
+    background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('images/liyue_evening.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+
+/* If I want to edit only one card: */
+
+/* .whats-new__car:nth-child(2) {
+    background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('/images/liyue_evening.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+} */
+
+
+.proj-highlights__card h2 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.proj-highlights__card p {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.proj-highlights__card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .proj-highlights {
+        height: auto;
+    }
+
+    .wproj-highlights h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .proj-highlights {
+        height: auto;
+    }
+
+    .proj-highlights h1 {
+        font-size: 1.2rem;
+    }
+
+    .proj-highlights__card {
+        width: 360px;
+    }
+}
+
+
 
 
 
