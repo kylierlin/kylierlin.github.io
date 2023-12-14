@@ -1,0 +1,814 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat';
+}
+
+.w100 {
+    font-weight: 100;
+  }
+  .w200 {
+    font-weight: 200;
+  }
+  .w300 {
+    font-weight: 300;
+  }
+  .w400 {
+    font-weight: 400;
+  }
+
+
+
+
+/*  */
+/* Navbar CSS */
+/*  */
+
+
+
+
+
+/* target navbar - visible */
+/* to target classes, use . */
+.navbar {
+    background: #fff;
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 1 rem is equal to 16 pixels */
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    /* ensure that no matter where I scroll, nothing covers this */
+    z-index: 999;
+}
+
+/* target navbar container - not visible */
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 2000px;
+    /* margin/padding: R T B L - but if 2 values, it's TB LR */
+    margin: 0 auto;
+    padding: 0 55px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* to target ids, use # */
+#navbar__logo {
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #131313;
+}
+
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #131313; /* CHANGE TO CUSTOM COLOR? */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+/* hovers */
+.button:hover {
+    background: #4837ff;
+    transition: all 0.3s ease;
+
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* responsive part! when u squish screen */
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300pix;
+        padding: 0;
+    }
+
+    /* nothing will show when you squish screen... */
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    /*  javascript trigger */
+    .navbar_menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+
+
+/*  */
+/* Hero Section CSS */
+/*  */
+
+
+
+
+.main {
+    background: #fff;
+}
+
+.main__container {
+    display: grid;
+    /* 50/50 screen split below */
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-self: center;
+    /* center */
+    margin: 0 auto;
+    height: 65vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 2000px;
+    padding: 0 50px;
+
+}
+
+/* .main__content {
+
+} */
+
+
+/* Header 1 */
+.main__content h1 {
+    font-size: 4rem;
+    background-size: 100%;
+    color: #141414;
+    text-align: left;
+    margin-top: 60px;
+}
+
+/* Header 2 */
+.main__content h2 {
+    font-size: 2rem;
+    background-size: 100%;
+    color: #141414;
+    text-align: left;
+}
+
+.main__card {
+    width: 90vw;
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+}
+
+/* paragraph */
+.main__content p {
+    margin-top: 1rem; 
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    color: #141414;
+    text-align: left;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position:absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: right;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    z-index: 50;
+}
+
+#main__img {
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+}
+
+
+
+
+
+/*  */
+/* Mobile Responsive CSS */
+/*  */
+
+
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .main__content {
+        text-align: left;
+        margin-bottom: 4rem;
+    }
+    
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    #main__img {
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+
+}
+
+@media screen and (max-width:480px) {
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .main__content h1 {
+        font-size: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    #main__img {
+        height: 100%;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+
+
+
+
+/*  */
+/* What's New CSS */
+/*  */
+
+
+.whats-new {
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: auto;
+    padding: 0 50px;
+}
+
+.whats-new h1 {
+    color:#131313;
+    background-size: 100%;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.whats-new__container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.whats-new__card {
+    margin: 1rem;
+    margin-top: 5px;
+    height: 15vh;
+    width: 75vw;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    /* linear gradient to make a bg image darker */
+    /* background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('images/matheo-jbt-BP0RBHQZMcI-unsplash.jpg'); */
+    background-size: cover;
+    position: relative;
+    color:#131313;
+    font-weight: 500;
+}
+
+.whats-new__scroll{
+    padding:5px;
+    margin:5px;
+    border-radius: 4px;
+    width: 85vw;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align:justify;
+   }
+
+
+/* If I want to edit only one card: */
+
+/* .whats-new__car:nth-child(2) {
+    background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('/images/liyue_evening.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+} */
+
+
+.whats-new h2 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.whats-new__card p {
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.whats-new__card:hover {
+    transform: scale(1.01);
+    transition: 0.2s ease-in;
+    /* cursor: pointer; */
+}
+
+@media screen and (max-width: 960px) {
+    .whats-new {
+        height: auto;
+        width: auto;
+    }
+
+    .whats-new h1 {
+        font-size: 2rem;
+        margin-top: 8rem;
+    }
+
+    .whats-new p {
+        font-size: 18px;
+    }
+
+    .whats-new__card {
+        width: auto;
+    }
+
+    .whats-new__scroll {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .whats-new {
+        height: auto;
+        width: auto;
+    }
+
+    .whats-new h1 {
+        font-size: 1.2rem;
+    }
+
+    .whats-new p {
+        font-size: 12px;
+    }
+
+    .whats-new__card {
+        width: auto;
+    }
+
+    .whats-new__scroll {
+        width: 360px;
+    }
+}
+
+
+/*  */
+/* Project Highlights CSS */
+/*  */
+
+
+.proj-highlights {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: auto;
+    padding: 0 50px;
+}
+
+.proj-highlights h1 {
+    color:#131313;
+    background-size: 100%;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.proj-highlights__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proj-highlights__card {
+    margin: 1rem;
+    height: 400px;
+    width: 400px;
+    border-radius: 4px;
+    /* linear gradient to make a bg image darker */
+    background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('images/liyue_evening.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+
+/* If I want to edit only one card: */
+
+/* .whats-new__car:nth-child(2) {
+    background-image: linear-gradient(to bottom, 
+        rgba(0,0,0,0) 0%,
+        rgba(17,17,17,0.6) 100%), 
+        url('/images/liyue_evening.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+} */
+
+
+.proj-highlights__card h2 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.proj-highlights__card p {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.proj-highlights__card:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .proj-highlights {
+        height: auto;
+    }
+
+    .wproj-highlights h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .proj-highlights {
+        height: auto;
+    }
+
+    .proj-highlights h1 {
+        font-size: 1.2rem;
+    }
+
+    .proj-highlights__card {
+        width: 360px;
+    }
+}
+
+
+
+
+
+/*  */
+/* Footer CSS */
+/*  */
+
+.footer__container {
+    background-color: #fff;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #footer__logo {
+    color: #141414;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+} */
+
+.footer__links {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+
+.footer__link--items > h2 {
+    color: #141414
+}
+
+.footer__link--items a {
+    color: #141414;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #afafaf; /* CHANGE */
+    transition: 0.3s ease-out;
+}
+
+/* Social Icons */
+
+.social__icons--link {
+    color: #141414;
+    font-size: 24px;
+}
+
+.social__media {
+    max-width: 1000px;
+    width: 100%
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__logo {
+    color: #141414;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website__rights {
+    color: #595959;
+}
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__rights {
+        margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .social__media--wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__link--items {
+        margin: 0;
+        padding: 10px;
+        width: 100%
+    }
+}
