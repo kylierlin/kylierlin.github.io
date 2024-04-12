@@ -1,0 +1,321 @@
+/* Styles for Webpage */
+
+/* set padding and margins to 0 so divs touch the edge of the page */
+body {
+    padding:0;
+    margin:0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* tooltips */
+.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 8px;
+    font: 14px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .bartooltip {
+    position: absolute;
+    text-align: left;
+    padding: 8px;
+    font: 14px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+
+/* placeholder images for charts */
+.bubble-place-holder {
+    background-color: #D9D9D9;
+    /* border: 1px solid #000; */
+    height: 400px;
+    width: 400px;
+    margin-left: 4%
+}
+
+.bar-place-holder {
+    /* background-color: #D9D9D9; */
+    margin: 2px;
+    /* border: 1px solid #000; */
+    height: 195px;
+    width: 195px;
+}
+
+.bar2-place-holder {
+    background-color: #D9D9D9;
+    margin: 2px;
+    /* border: 1px solid #000; */
+    height: 215px;
+    width: 345px;
+}
+
+.table-place-holder {
+    background-color: #D9D9D9;
+    margin: 2px;
+    /* border: 1px solid #000; */
+    height: 200px;
+    width: 345px;
+}
+
+.dotplot-container {
+    /* background-color: #D9D9D9; */
+    margin: 2px;
+    padding: 10px;
+    padding-top: 0px;
+    border: 1px solid #000;
+    height: 1000px;
+    width: 500px;
+    display: grid;
+    /* align-items: top; */
+    grid-template-columns: 100%;
+}
+
+.dotplot-container h3 {
+    margin: 5px;
+}
+
+.dotplot-place-holder {
+    /* background-color: grey; */
+    margin: 2px;
+    /* border: 1px solid #000; */
+    height: 100px;
+    width: 450px;
+}
+
+/* titles for dashboards */
+.subgroup--title {
+    font-size: 24px;
+    color: #000;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight:700;
+}
+
+/* controls div */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+  }
+
+/* ///////// */
+/* header tab */
+/* ///////// */
+
+
+.header-tab {
+    margin: 0;
+    background-color: #70A17E;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    position: fixed; /* Fix header (stay in place on scroll) */
+    /* Use a flexbox layout */
+	display: flex;
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	/* The important part: vertically center the items */
+	align-items: center;
+    box-shadow: 3px 3px 3px gray;
+}
+
+/* H2 for logo title */
+.logo--title {
+    font-size: 24px;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    font-weight:700;
+}
+
+
+/* ///////// */
+/* sidebar   */
+/* ///////// */
+
+.sidenav {
+    background-color: #373737;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 30%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-top: 60px;
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
+/* navigation container for items */
+.sidenav__container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* navigation container for items */
+.sidebar-text__container {
+    width: 94%;
+    height: 100%;
+    margin: 9px;
+    text-align: left;
+}
+
+/* H2 for sidenav */
+.sidenav--title {
+    font-size: 24px;
+    color: #EFEBE9;
+    padding-top: 0px;
+    margin-top: 10px;
+    font-weight:700;
+}
+
+/* sidebar text */
+.sidebar--text {
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight:400;
+}
+
+
+/* ///////// */
+/* sidebar footer  */
+/* ///////// */
+
+.sidefooter {
+    background-color: #373737;
+    height: 50px; /* Full-height: remove this if you want "auto" height */
+    width: 30%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+/* sidebar link text */
+.datasource-text {
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight:400;
+}
+
+
+/* ///////// */
+/* main page */
+/* ///////// */
+
+/* Style page content */
+.main {
+    margin-top: 60px;
+    margin-left: 30%; /* Same as the width of the sidebar */
+    padding: 0px;
+    /* border: 1px solid #000; */
+    width: 70%;
+    /* Use a flexbox layout */
+	display: flex;
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	/* The important part: vertically center the items */
+	align-items: center;
+}
+
+/* /////////////// */
+/* search food box */
+/* /////////////// */
+
+.searchfood-box {
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    width: 96%;
+    height: 1600px;
+    border: 3px solid #000;
+}
+
+
+.visbox {
+    /* border: 1px solid #000; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.searchfood-leftcol {
+    /* background-color: grey; */
+    height: 425px; /* Full-height: remove this if you want "auto" height */
+    width: 35%; /* Set the width of the sidebar */
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    /* display: flex; */
+    /* borderpx solid #0: 100; */
+}
+
+.searchfood-rightcol {
+    /* background-color: grey; */
+    height: 425px; /* Full-height: remove this if you want "auto" height */
+    margin-left: 15px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    /* border: 1px solid #000; */
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+/* /////////////// */
+/* table CSS */
+/* /////////////// */
+
+/* #table {
+    border: 1px solid #000;
+} */
+
+.bodyTable td {
+    background-color: #FFF;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bodyTable tr {
+    background-color: #FFF;
+    height: 40px;
+}
+
+.bodyTable tr:hover {
+    background-color:grey;
+}
+
+/* .headerTable th:hover {
+    background-color:#70A17E;
+    
+} */
+
+.scroll {
+    overflow: auto;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>InfoVis: HW 4</title>
+  </head>
+  <body>
+
+    <!-- Header Tab -->
+    <div class="header-tab">
+      <h2 class="logo--title"><span>NUTRIVIS  </span><img src="public/leaf.png" width = 25px height = 25px /></h2>
+    </div>
+
+    <!-- Side Bar -->
+    <div class="sidenav">
+      <!-- Bubble Chart -->
+      <div class="sidenav--container">
+        <h2 class="sidenav--title">Food Groups Overview</h2>
+
+        <div class="bubble-place-holder">
+          <svg id = "bubble" width="400px" height="400px"></svg>
+          <script src="./src/bubble.js" type="module"></script>
+        </div>
+
+        <!-- Description -->
+        <div class="sidebar-text__container">
+          <p class="sidebar--text">Food items are organized into 7 major food groups and 22 unique descriptions of 
+            each group that can be thought of as subgroups.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Footer --> 
+    <div class="sidefooter">
+      <div class="sidebar-text__container">
+        <div class="datasource-text">
+          <span>Data Source: <a class = "datasource-text" href="http://rosmarus.refsmmat.com/datasets/datasets/nutrition/">the National Nutrient Database for Standard Reference</a></span>
+        </div>
+      </div>
+    </div>
+
+     <!-- Main Page -->
+    <div class="main">
+
+      <!-- Search for a Food Box -->
+      <div class="searchfood-box">
+        <h2 class="subgroup--title">Search for a Food & Understand its Nutritive Value</h2>
+
+        <!-- Controls -->
+        <div class="controls">
+          <!-- Text Input (search) -->
+          <div>
+            <form>
+              <input type="text" id="food-search" name="foodsearch" placeholder="Type a food here..."><br>
+              <!-- <button id="search-button">Search</button> -->
+            </form>
+          </div>
+          <!-- Dropdown filter (food group) -->
+          <div>
+            <label for="group-select">Filter by food group:</label>
+            <select id="group-select"></select>
+          </div>
+          <!-- Dropdown filter (food description) -->
+          <!-- <div>
+            <label for="x-select">Filter by food subgroup:</label>
+            <select id="subgroup-select"></select>
+          </div> -->
+        </div>
+
+        <!-- Visualizations -->
+        <div class="visbox">
+          
+          <!-- left column -->
+          <div class="searchfood-leftcol">
+            <div id="table" width="345px" height="200px"></div>
+            <script src="./src/table.js" type="module"></script>
+            <svg id="fats-bars" width="345px" height="215px"></svg>
+            <script src="./src/fats_bar.js" type="module"></script>
+          </div>
+          <!-- right column -->
+          <div class="searchfood-rightcol">
+            <div class="bar-place-holder"><svg id="weight-hist" width="195px" height="195px"></svg></div>
+            <div class="bar-place-holder"><svg id="water-hist" width="195px" height="195px"></svg></div>
+            <div class="bar-place-holder"><svg id="calories-hist" width="195px" height="195px"></svg></div>
+            <div class="bar-place-holder"><svg id="protein-hist" width="195px" height="195px"></svg></div>
+            <div class="bar-place-holder"><svg id="totalfat-hist" width="195px" height="195px"></svg></div>
+            <div class="bar-place-holder"><svg id="totalcarbs-hist" width="195px" height="195px"></svg></div>
+          </div>
+
+        </div>
+
+        <!-- minerals -->
+        <h3>Vitamins & Minerals</h3>
+        <div class="visbox">
+          <div class="dotplot-container">
+            <h3>Vitamins (mg)</h3>
+            <div class="dotplot-place-holder"><svg id="vitA-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="vitC-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="vitE-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Thiamin-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Riboflavin-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Niacin-dot" width="450px" height="100px"></svg></div>
+          </div>
+          <div class="dotplot-container">
+            <h3>Minerals (mg)</h3>
+            <div class="dotplot-place-holder"><svg id="Ash-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Calcium-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Phosphorus-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Iron-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Sodium-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Potassium-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Magnesium-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Zinc-dot" width="450px" height="100px"></svg></div>
+            <div class="dotplot-place-holder"><svg id="Copper-dot" width="450px" height="100px"></svg></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script src="./src/drawAllCharts.js" type="module"></script>
+  </body>
+</html>
