@@ -2,287 +2,492 @@
 <html>
 <!-- Head -->
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/imgs/sprout-reg.png" />
     <title>Kylie R. Lin</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="src/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans:400,500,600,700,800' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/6fcc3587e0.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Body -->
 <body>
 
-<!-- Side bar -->
-<div class="sidenav">
-    <!-- Menu -->
-    <div class="sidenav--container">
-        <div class="sidenav-left-column">
-            <a href="#about">about</a>
-            <a href="#research">research</a>
-            <a href="#teaching">teaching</a>
-            <a href="#fun-facts">fun facts</a>
-            <a href="files/01_16_23 kylierlin_cv.pdf">CV</a>
+    <!-- svg for stars -->
+    <svg class="test-stars" height="100%" width="100%"><g>
+            <!-- <circle class="star" r="45" cx="800" cy="80" fill="#EDBF4A" />
+            <circle class="star" r="10" cx="1100" cy="250" fill="#EDBF4A" />
+            <circle class="star" r="5" cx="600" cy="450" fill="#EDBF4A" />
+            <circle class="star" r="10" cx="700" cy="650" fill="#EDBF4A" />
+            <circle class="star" r="5" cx="395" cy="350" fill="#EDBF4A" />
+            <circle class="star" r="10" cx="300" cy="660" fill="#EDBF4A" />
+            <circle class="star" r="10" cx="280" cy="560" fill="#EDBF4A" />
+        </g> -->
+    </svg>
+    <script src="main.js" type="module"></script>
+
+    <div class="wrapper-main">
+
+        <!-- side bar of webpage -->
+        <div class="sidebar">
+            <div class="wrapper-sidebar">
+                <!-- profile picture -->
+                <div class="image-cropper">
+                    <img class="profile-img" src="src/imgs/kylielin_headshot.jpg" alt="profile image"> 
+                </div>
+                <h2>KYLIE LIN</h2>
+                <h3>HCC PhD Student</h3>
+                <h3>Georgia Institute of Technology</h3>
+                <p>klin368 [at] gatech [dot] edu</p>
+                
+                <!-- social icons -->
+                <div class="social-icons">
+                    <a class = "icons" href="mailto:klin368@gatech.edu" title="email">  
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a class = "icons" href="https://scholar.google.com/citations?user=_Er8j3YAAAAJ&hl=en&oi=sra" title="scholar" target="_blank">  
+                        <i class="fa-brands fa-google-scholar"></i>
+                    </a>
+                    <a class = "icons" href="https://twitter.com/kylierlin" title="twitter" target="_blank"> 
+                    <i class="fa-brands fa-twitter-square"></i>
+                    </a>
+                    <a class = "icons" href="https://www.linkedin.com/in/kylie-lin" title="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a class = "icons" href="https://github.com/kylierlin"  title="github" target="_blank"> 
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <!-- L/D mode toggle -->
+                <div id="mode-toggle">
+                    <i class="indicator"></i>
+                </div>
+                <script>
+                    let htmltag = document.documentElement;
+                    let body = document.querySelector('body');
+                    let toggle = document.getElementById('mode-toggle');
+                    let topnav = document.getElementsByClassName('top-nav')
+                    let blogitem = document.getElementsByClassName('blog-item')
+                    toggle.onclick = function() {
+                        htmltag.classList.toggle('mode-active')
+                        toggle.classList.toggle('mode-active')
+                        body.classList.toggle('mode-active')
+                        for (var i = 0; i < topnav.length; i++) {
+                            topnav[i].classList.toggle('mode-active')
+                        }
+                        for (var i = 0; i < blogitem.length; i++) {
+                            blogitem[i].classList.toggle('mode-active')
+                        }
+                    }
+                </script>
+
+                <!-- recent news box -->
+                    <div class="content-container-02">
+                        <h3>Recent News</h3>
+
+                        <div class="news-item">
+                            <p><b>Nov. 2023</b> 🌉 Presented my poster on visual complexity, comprehension, and confidence at Psychonomics 2023 in SF.</p>
+                        </div>
+                        <div class="news-item">
+                            <p><b>Sept. 2023</b> <img src="src/imgs/gt-logo.png" width="22px" height="12px" alt="Georgia tech logo in blue and gold.">
+                                Started my first year in the HCC PhD program at Georgia Tech!</p>
+                        </div>
+                    </div>
+
+            </div>
         </div>
-        <div class="sidenav-right-column">
-            <!-- this is for the green bar -->
+
+
+        <!-- main site content -->
+        <div class="site-content">
+            <!-- top navigation bar -->
+            <div class="top-nav">
+                    <a class="nav-link nav-link-ltr" href="#about">about</a>
+                    <a class="nav-link nav-link-ltr" href="#publications">publications</a>
+                    <a class="nav-link nav-link-ltr" href="#teaching">teaching</a>
+                    <a class="nav-link nav-link-ltr" href="#awards">awards</a>
+                    <!-- <a class="nav-link nav-link-ltr" href="#education">education</a> -->
+                    <a class="nav-link nav-link-ltr" href="#employment">employment</a>
+                    <a class="nav-link nav-link-ltr" href="#blog">blog</a>
+                    <a class="nav-link nav-link-ltr" href="src/files/01_16_23 kylierlin_cv.pdf" target="_blank">CV</a>
+            </div>
+
+            <!-- content -->
+            <div id="about"></div>
+            <div class="content-container">
+                <div class="content-box-01">
+
+                    <!-- about section -->
+                    <div class="about-section">
+                        <h2>Hi, I'm Kylie.</h2>
+                        <p>I’m a rising second-year PhD student in <a href="https://www.cc.gatech.edu/degree-programs/phd-human-centered-computing">Human-Centered Computing</a> 
+                            at <a href="https://www.gatech.edu/">Georgia Tech</a>. 
+                            I work with the <a href="https://vis.gatech.edu/">GT Visualization Lab</a> and am advised by 
+                            <a href="https://cyxiong.com/">Cindy Xiong Bearfield</a>.
+                        </p>
+                        <p>At the intersection of human cognition and visualization design in Information Visualization, 
+                            <b>I study how we can help people understand data and make informed decisions</b>. My work focuses 
+                            on how to use data visualization as a medium to promote critical thinking, engagement, and 
+                            calibrated confidence judgments.
+                        </p>
+                        <p>In the past, I have had the pleasure of collaborating with researchers at Tableau, Adobe, and 
+                            Northwestern University (the Reading Comprehension Lab, Visual Thinking Lab, 
+                            and Social Media Lab). I am also passionate about User Experience research and have worked in 
+                            Automotive UX Research at SiriusXM.
+                        </p>
+                        <!-- CV Button -->
+                        <form method="get" action="src/files/01_16_23 kylierlin_cv.pdf" target="_blank">
+                            <button class="button">view my CV</button> 
+                        </form>
+                        <div id="publications"></div>
+                    </div>
+
+                    <br>
+
+                    <!-- publications section -->
+                    <div class="publications-section" id="publications">
+                        <h3>Publications</h3>
+
+                        <div class="pub--items">
+                            <!-- item 1 -->
+                            <div class="pub-left-column">
+                                <img src="src/imgs/pub2021-img.png" class = "pub--image" width=95% height=100% alt="Thumbnail image from 2021 publication. Table of colored and labeled bar charts.">
+                            </div>
+                            <div class="pub-right-column">
+                                <p><b>Visual Arrangements of Bar Charts Influence Comparisons in Viewer Takeaways</b></p>
+                                <p>Cindy Xiong Bearfield, Vidya Setlur, Benjamin Bach, <b>Kylie Lin</b>, Eunyee Koh, Steven Franconeri</p>
+                                <p>IEEE TVCG, 2021</p>
+                                <a href="https://arxiv.org/pdf/2108.06370" target="_blank">PDF</a>
+
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- posters -->
+                        <p><b>Posters</b></p>
+                        <div class="pub--items">
+                            <!-- item 2 -->
+                            <div class="pub-left-column">
+                                <img src="src/imgs/psych2023-img.png" class = "pub--image" width=95% height=100% alt="Thumbnail image from 2023 psychonomics poster.">
+                            </div>
+                            <div class="pub-right-column">
+                                <p><b>Does Visual Complexity Impact Reader Confidence and Comprehension of Data Visualizations?</b></p>
+                                <p><b>Kylie Lin</b>, David Rapp, Cindy Xiong Bearfield</p>
+                                <p>Psychonomic Society, 2023</p>
+                                <a href="files/kylierlin-psychonomics2023.pdf" download="kylierlin-psychonomics2023" target="_blank">PDF</a>
+                            </div>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="pub--items">
+                            <div class="pub-left-column">
+                                <img src="src/imgs/vssposter2022.png" class = "pub--image" width=95% height=100% alt="Examples of stimuli from VSS 2023 poster. Bubble, bar, and pie chart.">
+                            </div>
+                            <div class="pub-right-column">
+                                <p><b>Graph Designs Do Not Improve Visual Memory</b></p>
+                                <p>Madeline F. Awad, <b>Kylie Lin</b>, Steven L. Franconeri</p>
+                                <p>Vision Sciences Society | Journal of Vision, 2023</p>
+                                <div class="pub-links">
+                                    <a href="src/files/vss2023-poster.pdf" download="vss2023-poster.pdf" target="_blank">PDF</a>
+                                    <p><b>|</b></p>
+                                    <a href="https://jov.arvojournals.org/article.aspx?articleid=2792497" target="_blank">abstract</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 4 -->
+                        <div class="pub--items">
+                            <div class="pub-left-column">
+                                <img src="src/imgs/vss1-img.png" class = "pub--image" width=95% height=100% alt="Examples of stimuli from VSS 2022 poster. Bubble, bar, and pie chart.">
+                            </div>
+                            <div class="pub-right-column">
+                                <p><b>Does using a Diversity of Graph Types Help Your Audience Remember your Data?</b></p>
+                                <p>Madeline F. Awad, <b>Kylie Lin</b>, Steven L. Franconeri</p>
+                                <p>Vision Sciences Society | Journal of Vision, 2022</p>
+                                <div class="pub-links">
+                                    <a href="src/files/vss2022-poster.pdf" download="vss2022-poster.pdf" target="_blank">PDF</a>
+                                    <p><b>|</b></p>
+                                    <a href="https://jov.arvojournals.org/article.aspx?articleid=2784772" target="_blank">abstract</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 5 -->
+                        <div class="pub--items">
+                            <div class="pub-left-column">
+                                <img src="src/imgs/expo2022-img.png" class = "pub--image" width=95% height=100% alt="Image of poster from undergraduate expo.">
+                            </div>
+                            <div class="pub-right-column">
+                                <p><b>Attempts to Augment Refutation Text Benefits with Visualizations</b></p>
+                                <p><b>Kylie Lin</b>, Cindy Xiong Bearfield, David Rapp</p>
+                                <p>Northwestern Undergraduate Research Exposition, 2022</p>
+                                <a href="kylierlin-expo2022.pdf" download="kylierlin-expo2022" target="_blank">PDF</a>
+                            </div>
+                        </div>
+                        <div id="teaching"></div>
+                    </div>
+
+                    <br>
+
+                    <!-- teaching section -->
+                    <div class="teaching-section">
+                        <h3>Teaching</h3>
+
+                        <div class="pub--items">
+                            <!-- item 1 -->
+                            <div class="teach-left-column">
+                                <p>Spring 2023</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>STAT 390: Data Science Project</b></p>
+                                <p>Muntz Lassonde Undergraduate Teaching Assistant to Professor Lizhen Shi.</p>
+                            </div>
+                            <!-- item 2 -->
+                            <div class="teach-left-column">
+                                <p>Winter 2022-23</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>STAT 302: Data Visualization</b></p>
+                                <p>Muntz Lassonde Undergraduate Teaching Assistant to Professor Danielle Sass.</p>
+                            </div>
+                            <!-- item 3 -->
+                            <div class="teach-left-column">
+                                <p>Fall 2021</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>COMM_ST 227: Communication and Technology</b></p>
+                                <p>Undergraduate Peer Advisor to Professor Jeremy Birnholtz.</p>
+                            </div>
+                            <!-- item 4 -->
+                            <div class="teach-left-column">
+                                <p>Winter 2021</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>COMM_ST 275: Persuasive Images: Rhetoric in Popular Culture</b></p>
+                                <p>Undergraduate Teaching Assistant to Professor Irving Rein.</p>
+                            </div>
+                        </div>
+                        <div id="awards"></div>
+                    </div>
+
+                    <br>
+
+                    <!-- awards section -->
+                    <div class="awards-section">
+                        <h3>Awards</h3>
+
+                        <!-- using tech css (its the same) -->
+                        <div class="pub--items">
+                            <!-- item 1 -->
+                            <div class="teach-left-column">
+                                <p>2023</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>Departmental Excellence Award for Undergraduate Students</b></p>
+                                <p class="award-attr">by Northwestern Department of Communication Studies</p>
+                            </div>
+                            <!-- item 2 -->
+                            <div class="teach-left-column">
+                                <p>2022</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>MinneAnalytics Scholarship, $500</b></p>
+                                <p class="award-attr">by MinneAnalytics</p>
+                            </div>
+                            <!-- item 3 -->
+                            <div class="teach-left-column">
+                                <p>2022</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>2nd Place, Women in Data Science Datathon, Chicago</b></p>
+                                <p class="award-attr">by WiDS Chicago</p>
+                            </div>
+                            <!-- item 4 -->
+                            <div class="teach-left-column">
+                                <p>2021</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>Cognitive Science Summer Undergraduate Research Fellowship, $3500</b></p>
+                                <p class="award-attr">by Northwestern Cognitive Science Department</p>
+                            </div>
+                            <!-- item 5 -->
+                            <div class="teach-left-column">
+                                <p>2021</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>Summer Undergraduate Research Grant, $3500 (awarded but declined)</b></p>
+                                <p class="award-attr">by Northwestern University OUR</p>
+                            </div>
+                            <!-- item 6 -->
+                            <div class="teach-left-column">
+                                <p>2021</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>1st Place, Northwestern Data Visualization Contest</b></p>
+                                <p class="award-attr">by Northwestern University</p>
+                            </div>
+                            <!-- item 7 -->
+                            <div class="teach-left-column">
+                                <p>2020</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>Finalist, McCormick Design-a-Thon</b></p>
+                                <p class="award-attr">by Northwestern McCormick School of Engineering</p>
+                            </div>
+                            <!-- item 8 -->
+                            <div class="teach-left-column">
+                                <p>2019</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>Clara Tao Memorial Scholarship</b></p>
+                                <p class="award-attr">by Carlmont High School Swim Team</p>
+                            </div>
+                            <!-- item 8 -->
+                            <div class="teach-left-column">
+                                <p>2017</p>
+                            </div>
+                            <div class="teach-right-column">
+                                <p><b>National Merit Commended Scholar</b></p>
+                                <p class="award-attr">by National Merit Scholarship Corporation</p>
+                            </div>
+                        </div>
+                        <div id="employment"></div>
+                    </div>
+
+                    <!-- education section
+                    <div class="education-section" id="awards">
+                        <h3>Education</h3>
+
+                    </div> -->
+
+                    <br>
+
+                    <!-- employment section -->
+                    <div class="employment-section">
+                        <h3>Employment</h3>
+
+                        <div class="emp--items">
+                            <!-- item 1 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/tri-logo.jpg" class = "emp--image" width=50% height=50% alt="TRI Logo">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.tri.global/" target="_blank">Toyota Research Institute</a></b>, Los Altos, CA</p>
+                                <p>Applied Behavioral Science Research Intern</p>
+                                <p>[STARTING SOON]</p>
+                            </div>
+                        </div>
+
+                        <div class="emp--items">
+                            <!-- item 2 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/gt-logo-full.png" class = "emp--image" width=50% height=50% alt="GT Logo">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.gatech.edu/" target="_blank">Georgia Institute of Technology</a></b>, Atlanta, GA</p>
+                                <p>Graduate Research Assistant</p>
+                                <p>2023&mdash;Present</p>
+                            </div>
+                        </div>
+
+                        <div class="emp--items">
+                            <!-- item 3 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/nu-seal.png" class = "emp--image" width=50% height=50% alt="NU Seal">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.northwestern.edu/" target="_blank">Northwestern University</a></b>, Evanston, IL</p>
+                                <p>Undergraduate Research Assistant, Undergraduate Teaching Assistant</p>
+                                <p>2020&mdash;2023</p>
+                            </div>
+                        </div>
+
+                        <div class="emp--items">
+                            <!-- item 4 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/sxm-logo.jpg" class = "emp--image" width=50% height=50% alt="SiriusXM Logo">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.siriusxmcvs.com/" target="_blank">SiriusXM</a></b>, Oakland, CA</p>
+                                <p>User Experience Research Intern</p>
+                                <p>Summer 2022</p>
+                            </div>
+                        </div>
+
+                        <div class="emp--items">
+                            <!-- item 5 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/joc-logo.jpg" class = "emp--image" width=50% height=50% alt="Just One Cookbook Logo">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.justonecookbook.com/" target="_blank">Just One Cookbook</a></b>, Belmont, CA</p>
+                                <p>Operations Analyst</p>
+                                <p>2020&mdash;2022</p>
+                            </div>
+                        </div>
+
+                        <div class="emp--items">
+                            <!-- item 6 -->
+                            <div class="emp-left-column">
+                                <img src="src/imgs/cherubs-logo.jpg" class = "emp--image" width=50% height=50% alt="Cherubs Logo">
+                            </div>
+                            <div class="emp-right-column">
+                                <p><b><a href="https://www.medill.northwestern.edu/journalism/high-school-programs/medill-cherubs.html" target="_blank">Medill-Northwestern Journalism Institute</a></b>, Evanston, IL</p>
+                                <p>Student Journalist</p>
+                                <p>Summer 2018</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!-- blog preview section -->
+                    <div class="blog-section" id="blog">
+                        <h3>I try to blog:</h3>
+                        <div class="blog-grid-container">
+                            <!-- item 2 -->
+                            <!-- <div class="blog-item">
+                                <div class="blog-item-image-container">
+                                    <img src="src/imgs/site-design.png" width=100% height=100% alt="Site Design Blog Preview">
+                                </div>
+                                <h3>2 | title goes here</h3>
+                                <p>More thoughts on vis-related topics (hopefully)
+                                </p>
+                            </div> -->
+                            <!-- item 1 -->
+                            <a href="blogs.html">
+                                <div class="blog-item">
+                                    <div class="blog-item-image-container">
+                                        <img src="src/imgs/site-design.png" width=100% height=100% alt="Site Design Blog Preview">
+                                    </div>
+                                    <h3>1 | Creating this Site</h3>
+                                    <p>Learn a little about how I created this personal site and hear some thoughts from someone without 
+                                        a CS background entering the field as a PhD student.
+                                    </p>
+                                </div>
+                            </a>
+                            <!-- <div class="blog-item">3</div>
+                            <div class="blog-item">4</div>
+                            <div class="blog-item">5</div>
+                            <div class="blog-item">6</div> -->
+                          </div> 
+
+                    </div>
+
+                    <br>
+
+
+                </div>
+            </div>
         </div>
+
     </div>
 
-    <!-- contact -->
-    <div class="contact">
-        <p class="p6">klin368 [at] gatech.edu</p>
-
-        <div class="social-icons">
-            <!-- <a href="#"  title="facebook"> 
-              <i class="fa-brands fa-facebook-square"></i>
-            </a> -->
-            <a class = "icons" href="https://github.com/kylierlin"  title="github" target="_blank"> 
-                <i class="fa-brands fa-square-github"></i>
-            </a>
-            <a class = "icons" href="https://twitter.com/kylierlin" title="twitter" target="_blank"> 
-              <i class="fa-brands fa-twitter-square"></i>
-            </a>
-            <a class = "icons" href="https://scholar.google.com/citations?user=_Er8j3YAAAAJ&hl=en&oi=sra" title="scholar" target="_blank">  
-                <i class="fa-brands fa-google-scholar"></i>
-            </a>
-            <!-- <a href="#" title="youtube">
-              <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            </a> -->
-            <a class = "icons" href="https://www.linkedin.com/in/kylie-lin" title="linkedin" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <!-- <a href="#" title="pinterest">
-              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-            </a> -->
-            <!-- <a href="#" title="camera">
-              <i class="fa fa-camera-retro" aria-hidden="true"></i>
-            </a> -->
-          </div>
-    </div>
-
-    <!-- Recent News -->
-    <div class="recent-news">
-        <br>
-        <br>
-        <br>
-        <h4>RECENT NEWS</h3>
-            <!-- item 1 -->
-            <p class="p7"><b>Nov. 2023</b> Presented my poster on visual complexity, comprehension, and confidence 
-                at Psychonomics 2023 in SF 	&#127753;
-            </p>
-            <!-- item 2 -->
-            <p class="p7"><b>Sept. 2023</b> Started my first year in the HCC PhD program at
-                Georgia Tech! <img src="imgs/gt-logo.png" width="24px" height="14px"
-                alt="Georgia tech logo in blue and gold.">
-            </p>
-    </div>
-
-  </div>
-
-
-<!-- Page content -->
-<div class="main">
-    <div class="title-left-column">
-        <h1 class="h1">KYLIE R. LIN</h1>
-        <h2 class="h2"><b>Human-Centered Computing PhD Student</b></h2>
-        <h2 class="h2-it">Georgia Institute of Technology</h2>
-    </div> 
-    <div class="title-right-column">
-        <img src="imgs/portrait.jpg" class = "headshot" width="220" height="176"
-            alt="Image of Kylie Lin. Shoulder-up photo of an woman in her early twenties with medium-length brown hair."> 
-    </div>
-
-    <!-- About -->
-    <div>
-        <section id="about">
-        <p class="p1">Hi, I'm Kylie! I am a <a href= "https://www.cc.gatech.edu/degree-programs/phd-human-centered-computing" target="_blank">Human-Centered Computing</a> PhD 
-            student at <a href= "https://www.gatech.edu" target="_blank">Georgia Tech</a>. I work with the 
-            <a href= "https://vis.gatech.edu/" target="_blank">GT Visualization Lab</a> and 
-            am advised by <a href= "https://cyxiong.com/" target="_blank">Cindy Xiong Bearfield.</a></p>
-        <p class="p2">At the intersection of human cognition and visualization
-            design in Information Visualization, <b>I study how we can
-            help people understand data and make informed decisions.</b> 
-            My work focuses on how to use data visualization as a medium 
-            to promote critical thinking, engagement, and calibrated 
-            confidence judgments.</p>
-        <p class="p3">In the past, I have had the pleasure of collaborating with 
-            researchers at <a href= "https://www.tableau.com/research" target="_blank">Tableau</a>, 
-            <a href= "https://research.adobe.com/" target="_blank">Adobe</a>, and various research labs at 
-            Northwestern University—the <a href= "https://rapplab.sesp.northwestern.edu/" target="_blank">Reading Comprehension Lab</a>, 
-            <a href= "https://visualthinking.psych.northwestern.edu/" target="_blank">Visual Thinking Lab</a>, 
-            and  <a href= "https://socialmedia.northwestern.edu/" target="_blank">Social Media Lab</a>. I am also passionate about User Experience research 
-            and have worked in Automotive UX Research at 
-            <a href= "https://www.siriusxm.com/" target="_blank">SiriusXM.</a></p>
-
-        <hr class="hr"></hr>
-        </section>
-    </div>
-
-    <!-- Research -->
-    <!-- Publications -->
-    <div>
-        <section id="research">
-        <h3 class="h3">PUBLICATIONS</h3>
-        <div class="pub__items">
-            <div class="pub-left-column">
-                <img src="imgs/pub2021-img.png" class = "pub--image" width=95% height=100%
-                alt="Thumbnail image from 2021 publication. Table of colored and labeled bar charts.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>Visual Arrangements of Bar Charts Influence Comparisons in Reader Takeaways</b></p>
-                <p class="p5">Cindy Xiong Bearfield, Vidya Setlur, Benjamin Bach, <b>Kylie Lin</b>, Eunyee Koh, Steven Franconeri</p>
-                <p class="p5">IEEE TVCG, 2021</p>
-                <a href="https://arxiv.org/pdf/2108.06370.pdf" target = ”_blank”>PDF</a>
-            </div>
-
-        </div>
-        </section>
-    </div>
-
-    <!-- Posters -->
-    <div>
-        <h3 class="h3">SELECT POSTERS</h3>
-        <div class="poster__items">
-            <!-- item 1 -->
-            <div class="pub-left-column">
-                <img src="imgs/psych2023-img.png" class = "pub--image" width=95% height=100%
-                alt="Thumbnail image from 2023 psychonomics poster.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>Does Visual Complexity Impact Reader Confidence and Comprehension of Data Visualizations?</b></p>
-                <p class="p5"><b>Kylie Lin</b>, David Rapp, Cindy Xiong Bearfield</p>
-                <p class="p5">Psychonomic Society, 2023</p>
-                <a href="files/kylierlin-psychonomics2023.pdf" download="kylierlin-psychonomics2023" target="_blank">PDF</a>
-            </div>
-             <!-- item 2 -->
-            <div class="pub-left-column">
-                <img src="imgs/blank-img.png" class = "pub--image" width=95% height=100%
-                alt="blank image.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>Mixed Graph Designs Do Not Improve Visual Memory</b></p>
-                <p class="p5">Madeline Awad, <b>Kylie Lin</b>, Steven Franconeri</p>
-                <p class="p5">Journal of Vision, 2023</p>
-                <a href="https://jov.arvojournals.org/article.aspx?articleid=2792497" target = ”_blank”>abstract</a>
-            </div>
-             <!-- item 3
-             <div class="pub-left-column">
-                <img src="imgs/portrait.jpg" class = "pub--image" width=95% height=100%
-                alt="Image of Kylie Lin. Shoulder-up photo of an woman in her early twenties with medium-length brown hair.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>The Effect of Visual Complexity on Confidence and Comprehension in Visualization Experiences</b></p>
-                <p class="p5"><b>Kylie Lin</b>, David Rapp, Cindy Xiong Bearfield</p>
-                <p class="p5">Northwestern Cog Sci Fest, 2023</p>
-                <a href="files/kylierlin-cogscifest2023.pdf" download="kylierlin-cogscifest2023" target="_blank">PDF</a>
-            </div> -->
-            <!-- item 4 -->
-            <div class="pub-left-column">
-                <img src="imgs/vss1-img.png" class = "pub--image" width=95% height=100%
-                alt="Examples of stimuli from VSS 2022 poster. Bubble, bar, and pie chart.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>Does using a Diversity of Graph Types Help Your Audience Remember your Data?</b></p>
-                <p class="p5">Madeline Awad, <b>Kylie Lin</b>, Steven Franconeri</p>
-                <p class="p5">Journal of Vision, 2022</p>
-                <a href="https://jov.arvojournals.org/article.aspx?articleid=2784772" target = ”_blank”>abstract</a>
-            </div>
-            <!-- item 5 -->
-            <div class="pub-left-column">
-                <img src="imgs/expo2022-img.png" class = "pub--image" width=95% height=100%
-                alt="Image of Kylie Lin. Shoulder-up photo of an woman in her early twenties with medium-length brown hair.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>Attempts to Augment Refutation Text Benefits with Visualizations</b></p>
-                <p class="p5"><b>Kylie Lin</b>, Cindy Xiong Bearfield, David Rapp</p>
-                <p class="p5">Northwestern Undergraduate Research Exposition, 2022</p>
-                <a href="files/kylierlin-expo2022.pdf" download="kylierlin-expo2022" target="_blank">PDF</a>
-            </div>
-            <!-- item 6
-            <div class="pub-left-column">
-                <img src="imgs/portrait.jpg" class = "pub--image" width=95% height=100%
-                alt="Image of Kylie Lin. Shoulder-up photo of an woman in her early twenties with medium-length brown hair.">
-            </div>
-            <div class="pub-right-column">
-                <p class="p4"><b>The Effects of Visual Diversity in Series of Charts</b></p>
-                <p class="p5">Madeline Awad, <b>Kylie Lin</b>, Steven Franconeri</p>
-                <p class="p5">Northwestern Cog Sci Fest, 2022</p>
-                <a href="files/kylierlin-cogscifest2022.pdf" download="kylierlin-cogscifest2022" target="_blank">PDF</a>
-            </div> -->
-
-        </div>
-        <hr class="hr"></hr>
-    </div>
-
-
-
-    <!-- Teaching -->
-    <div>
-        <section id="teaching">
-        <h3 class="h3">TEACHING</h3>
-        <div class="pub__items">
-            <!-- item 1 -->
-            <div class="teach-left-column">
-                <p class="p4">Spring 2023</p>
-            </div>
-            <div class="teach-right-column">
-                <p class="p4"><b>STAT 390: Data Science Project</b></p>
-                <p class="p5">Undergraduate Teaching Assistant to Professor Lizhen Shi.</p>
-            </div>
-            <!-- item 2 -->
-            <div class="teach-left-column">
-                <p class="p4">Winter 2022-</p>
-                <p class="p4">Winter 2023</p>
-            </div>
-            <div class="teach-right-column">
-                <p class="p4"><b>STAT 302: Data Visualization</b></p>
-                <p class="p5">Undergraduate Teaching Assistant to Professor Danielle Sass.</p>
-            </div>
-            <!-- item 3 -->
-            <div class="teach-left-column">
-                <p class="p4">Fall 2021</p>
-            </div>
-            <div class="teach-right-column">
-                <p class="p4"><b>COMM_ST 227: Communication and Technology</b></p>
-                <p class="p5">Undergraduate Peer Advisor to Professor Jeremy Birnholtz.</p>
-            </div>
-            <!-- item 4 -->
-            <div class="teach-left-column">
-                <p class="p4">Winter 2021</p>
-            </div>
-            <div class="teach-right-column">
-                <p class="p4"><b>COMM_ST 275: Persuasive Images: Rhetoric in Popular Culture</b></p>
-                <p class="p5">Undergraduate Teaching Assistant to Professor Irving Rein.</p>
-            </div>
-
-        </div>
-        <hr class="hr"></hr>
-        </section>
-    </div>
-
-    <!-- Fun Stuff -->
-    <div>
-        <section id="fun-facts">
-        <br>
-        <p class="p4"><b>In my free time, I...</b></p>
-        <ul>
-            <li class="p4">play fingerstyle guitar.</li>
-            <li class="p4">swim laps to clear my mind.</li>
-            <li class="p4">enjoy cooking (and eating) foods of all kinds.</li>
-            <li class="p4">relive my childhood by playing through old and new Pokémon games.</li>
-        </ul>
-        <a href="https://kylierlin.editorx.io/website" target="_blank">Take a look at my dedicated design portfolio here!</a>
-        <br>
-        <hr class="hr"></hr>
-        </section>
-    </div>
-
-</div>
-
-<!-- Footer -->
-<div class="footer">
-    <p>© Kylie Lin, 2023</p>
-
-</div>
+    <!-- footer -->
+    <footer>
+        <p>&#169; Kylie R. Lin, 2024</p>
+    </footer>
 
 </body>
+
 </html>
