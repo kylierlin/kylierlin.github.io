@@ -1,5 +1,5 @@
 // d3 code to create stars in background of site
-import * as d3 from "d3";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 // chart specs
 let svg_width = d3.select(".test-stars").node().getBoundingClientRect().width;
