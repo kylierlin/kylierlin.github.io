@@ -108,7 +108,8 @@ function createScatterplot() {
   /////////////////////////
   // Add hover functionality //
   /////////////////////////
-  dots.on("mouseover", mouseOnStar).on("mouseout", mouseOutStar);
+  dots.on("mouseover", mouseOnStar);
+  //   .on("mouseout", mouseOutStar);
 
   function mouseOnStar(event, d) {
     let randomjitter = randomNumber(6, 10);
@@ -122,14 +123,14 @@ function createScatterplot() {
       });
   }
 
-  function mouseOutStar(event, d) {
-    d3.select(this).attr("transform", function (d) {
-      return "translate(" + Math.abs(d.x * 100) + "," + d.y + ")";
-    });
-    //   .style("opacity", originalOpacity)
-    //   .style("fill", originalFill)
-    //   .style("stroke", "");
-  }
+  //   function mouseOutStar(event, d) {
+  //     d3.select(this).attr("transform", function (d) {
+  //       return "translate(" + Math.abs(d.x * 100) + "," + d.y + ")";
+  //     });
+  //     //   .style("opacity", originalOpacity)
+  //     //   .style("fill", originalFill)
+  //     //   .style("stroke", "");
+  //   }
 
   ///////////////////////////////////////
   // attempt 1: Define force simulation //
