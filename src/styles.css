@@ -818,7 +818,7 @@ footer {
 /* Media Responsive CSS */
 /* ----------------  */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:850px) {
 
     /* general */
 
@@ -873,6 +873,14 @@ footer {
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 2px 10px 2px #A7A7A750;
+    }
+
+    /* about */
+
+    .about-section {
+        text-align: justify;
+        margin: 10px;
+        width: 90%;
     }
 
     /* publications */
