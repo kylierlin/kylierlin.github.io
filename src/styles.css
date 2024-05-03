@@ -226,7 +226,7 @@ hr:before {
 /* ------------ */
 /* social icons */
 /* ----------- */
-.social-icons{
+.social-icons {
 	padding:0px;
     text-align: center;
 }
@@ -237,9 +237,13 @@ hr:before {
     font-size:30px;
     margin: 0px;
     padding: 5px;
-    text-decoration:none;
-  
+    text-decoration: none;
 }
+
+.social-icons.mode-active a {
+    text-decoration: none;
+}
+
 .social-icons a i{
 	line-height:30px;
     font-size:25px;
