@@ -930,6 +930,12 @@ footer {
         margin-left: 20px;
     }
 
+    /* svg z layer */
+
+    .test-stars {
+        z-index: 0;
+    }
+
 
 }
 
