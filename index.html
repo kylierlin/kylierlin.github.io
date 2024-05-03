@@ -69,8 +69,10 @@
                     let htmltag = document.documentElement;
                     let body = document.querySelector('body');
                     let toggle = document.getElementById('mode-toggle');
-                    let topnav = document.getElementsByClassName('top-nav')
-                    let blogitem = document.getElementsByClassName('blog-item')
+                    let topnav = document.getElementsByClassName('top-nav');
+                    let navlink = document.getElementsByClassName('nav-link');
+                    let blogitem = document.getElementsByClassName('blog-item');
+                    let bloglink = document.getElementsByClassName('bloglink');
                     toggle.onclick = function() {
                         htmltag.classList.toggle('mode-active')
                         toggle.classList.toggle('mode-active')
@@ -80,6 +82,12 @@
                         }
                         for (var i = 0; i < blogitem.length; i++) {
                             blogitem[i].classList.toggle('mode-active')
+                        }
+                        for (var i = 0; i < bloglink.length; i++) {
+                            bloglink[i].classList.toggle('mode-active')
+                        }
+                        for (var i = 0; i < navlink.length; i++) {
+                            navlink[i].classList.toggle('mode-active')
                         }
                     }
                 </script>
@@ -456,7 +464,7 @@
                                 </p>
                             </div> -->
                             <!-- item 1 -->
-                            <a href="blogs.html">
+                            <a href="blogs.html" class="bloglink">
                                 <div class="blog-item">
                                     <div class="blog-item-image-container">
                                         <img src="src/imgs/site-design.png" width=100% height=100% alt="Site Design Blog Preview">
