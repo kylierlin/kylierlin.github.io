@@ -568,9 +568,6 @@ hr:before {
     text-align: right;
 	width: 20%;
     vertical-align: top;
-} 
-
-.teach-left-column p {
     margin: 0;
     padding: 2px;
 }
@@ -780,7 +777,180 @@ footer {
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 
+/* blog page */
+
+.returnhome-button {
+    color: #A7A7A7;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    /* animation */
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0.85); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(0.85); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(0.85);
+    transition: all 200ms ease-in;
+    transform: scale(0.85);
+}
+
+.returnhome-button:hover {
+    color: #5F6F52;
+    /* animation */
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0.95);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(0.95);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(0.95);
+    transition: all 200ms ease-in;
+    transform: scale(0.95);
+
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+
 /* ------------------  */
 /* Media Responsive CSS */
 /* ----------------  */
 
+@media screen and (max-width:600px) {
+
+    /* general */
+
+    .body {
+        float:center;
+        justify-content: center;
+    }
+
+    .wrapper-main {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* sidebar */
+
+    .sidebar {
+        margin-left: 10px;
+        width: 90%;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wrapper-sidebar {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .content-container-02 {
+        width: 80%;
+        height: 150px;      
+    }
+
+    /* nav */
+
+    .top-nav {
+        display: none!important;
+     }
+
+     /* main content */
+
+     .site-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .content-container {
+        backdrop-filter: blur(0.25em);
+        width: 90%;
+        height: 100%;
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 10px 2px #A7A7A750;
+    }
+
+    /* publications */
+
+    .pub-left-column { 
+        display: none;
+    } 
+
+    .pub-right-column {
+        width: 95%;
+    }
+
+    /* teaching */
+
+    .teach-left-column{ 
+        height: 100%;
+        float: left; 
+        text-align: left;
+        padding: 2px;
+        padding-left: 10px;
+        width: 50%;
+        vertical-align: top;
+        margin: 0;
+    }
+    
+    .teach-right-column{ 
+        height: 100%;
+        float: left; 
+        margin: 0 0 10px 0;
+        padding: 0 0 0 10px;
+        text-align: left;
+        width: 78%;
+        vertical-align: top;
+    } 
+
+    /* employment */
+    .emp-right-column{ 
+        width: 60%
+    } 
+
+
+    /* blog */
+
+    .blog-grid-container {
+        grid-template-columns: 90%;
+    }
+    
+    .blog-item {
+        background-color: #F2F3F4;
+        height: 90%;
+        margin: 10px;
+        margin-left: 20px;
+    }
+
+
+}
+
+/* @media screen and (max-width: 600) and (orientation: portrait) {
+
+    .top-nav {
+        /* display: none!important; */
+        /* background-color: red; */
+    /* }
+
+    .nav-link {
+        display: none!important;
+        background-color: blue;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        justify-content: center;
+        text-align: center;
+        background-color: red;
+    }
+} */
