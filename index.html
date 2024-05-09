@@ -65,37 +65,7 @@
                 <div id="mode-toggle">
                     <i class="indicator"></i>
                 </div>
-                <script>
-                    let htmltag = document.documentElement;
-                    let body = document.querySelector('body');
-                    let toggle = document.getElementById('mode-toggle');
-                    let topnav = document.getElementsByClassName('top-nav');
-                    let navlink = document.getElementsByClassName('nav-link');
-                    let socialicon = document.getElementsByClassName('social-icons');
-                    console.log(socialicon);
-                    let blogitem = document.getElementsByClassName('blog-item');
-                    let bloglink = document.getElementsByClassName('bloglink');
-                    toggle.onclick = function() {
-                        htmltag.classList.toggle('mode-active')
-                        toggle.classList.toggle('mode-active')
-                        body.classList.toggle('mode-active')
-                        for (var i = 0; i < topnav.length; i++) {
-                            topnav[i].classList.toggle('mode-active')
-                        }
-                        for (var i = 0; i < blogitem.length; i++) {
-                            blogitem[i].classList.toggle('mode-active')
-                        }
-                        for (var i = 0; i < bloglink.length; i++) {
-                            bloglink[i].classList.toggle('mode-active')
-                        }
-                        for (var i = 0; i < navlink.length; i++) {
-                            navlink[i].classList.toggle('mode-active')
-                        }
-                        for (var i = 0; i < socialicon.length; i++) {
-                            socialicon[i].classList.toggle('mode-active')
-                        }
-                    }
-                </script>
+                <script src="mode-control.js" type="module"></script>
 
                 <!-- recent news box -->
                     <div class="content-container-02">
