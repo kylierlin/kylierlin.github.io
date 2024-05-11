@@ -314,6 +314,31 @@ hr:before {
     left: 30px;
 }
 
+/* ----------------------------- */
+/* scrollable sub side container */
+/* ---------------------------- */
+
+.sub-sidebar {
+    width: 100%;
+    height: 320px;
+    margin: 10px;
+    overflow: auto;
+    /* box-shadow: inset 0px 2px 10px 2px #A7A7A750; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------- */
+/* spotify playlist */
+/* ---------------- */ 
+
+.spotify-playlist {
+    margin: 10px;
+}
 
 /* ----------------------- */
 /* recent news blurred box */
@@ -326,8 +351,9 @@ hr:before {
 .content-container-02 {
     background-color: #F2F3F450;
     backdrop-filter: blur(0.25em);
-    width: 90%;
+    width: 80%;
     height: 150px;
+    /* margin-top:  15px; */
     margin: 0 auto;
     margin-top: 50px;
     padding: 15px;
@@ -337,6 +363,7 @@ hr:before {
     text-align: justify;
     display: block;
     overflow: auto;
+    position: relative;
     /* animation */
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1); 
