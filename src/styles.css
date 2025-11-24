@@ -79,6 +79,17 @@ p {
     font-weight: 500;
 }
 
+ul {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 b {
     font-size: 16px;
 }
@@ -538,13 +549,13 @@ hr:before {
 	height: 100%;
     float: left; 
     margin: 10px 0 10px 0;
-    text-align: left;
+    text-align: right;
 	width: 20% 
 } 
 
 .pub-right-column{ 
     height: 100%;
-	float: left; 
+	float: right; 
     margin: 0 0 10px 0;
     padding: 5px 0 0 10px;
     text-align: left;
@@ -863,6 +874,75 @@ footer {
 /* ------------------  */
 /* Media Responsive CSS */
 /* ----------------  */
+
+@media screen and (min-width:2200px) {
+
+
+    /* publications */
+
+    .pub-left-column{ 
+	height: 10%;
+    float: left; 
+    margin: 10px 0 10px 0;
+    text-align: right;
+	width: 18% 
+    }   
+
+    .pub-right-column {
+        width: 80%;
+    }
+
+    /* teaching */
+
+    .teach-left-column{ 
+        height: 100%;
+        float: left; 
+        text-align: left;
+        padding: 2px;
+        padding-left: 10px;
+        width: 50%;
+        vertical-align: top;
+        margin: 0;
+    }
+    
+    .teach-right-column{ 
+        height: 100%;
+        float: left; 
+        margin: 0 0 10px 0;
+        padding: 0 0 0 10px;
+        text-align: left;
+        width: 78%;
+        vertical-align: top;
+    } 
+
+    /* employment */
+    .emp-right-column{ 
+        width: 60%
+    } 
+
+
+    /* blog */
+
+    .blog-grid-container {
+        grid-template-columns: 90%;
+    }
+    
+    .blog-item {
+        background-color: #F2F3F4;
+        height: 90%;
+        margin: 10px;
+        margin-left: 20px;
+    }
+
+    /* svg z layer */
+
+    .test-stars {
+        z-index: -1;
+    }
+
+
+}
+
 
 @media screen and (max-width:850px) {
 
