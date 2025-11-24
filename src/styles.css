@@ -51,8 +51,17 @@ body.mode-active h3 {
 
 body.mode-active p {
     color: #D9D9D9;
-
 }
+
+body.mode-active ul {
+    color: #D9D9D9;
+}
+
+body.mode-active li {
+    color: #D9D9D9;
+}
+
+
 
 body.mode-active a {
     color: #D9D9D9;
